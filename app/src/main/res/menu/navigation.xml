@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/overview"
+        android:enabled="true"
+        android:title="Übersicht"
+        android:icon="@drawable/overview"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/reservations"
+        android:enabled="true"
+        android:title="Reservationen"
+        android:icon="@drawable/reservations"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/rental"
+        android:enabled="true"
+        android:title="Ausleihen"
+        android:icon="@drawable/borrow"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:title="Einstellungen"
+        android:icon="@drawable/settings"
+        app:showAsAction="ifRoom" />
+
+</menu>

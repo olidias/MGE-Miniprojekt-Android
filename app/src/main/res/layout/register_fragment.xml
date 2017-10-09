@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Gadgeothek"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="50dp"
+        tools:text="@string/username" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/login_text"
+        android:inputType="textPersonName" />
+
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_text"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="50dp"
+        tools:text="@string/password" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/password_text"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/password_repeat_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_text"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="50dp"
+        tools:text="@string/passwordrepeat" />
+
+
+    <EditText
+        android:id="@+id/password_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_toEndOf="@+id/password_text"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/password_repeat"
+        android:layout_below="@+id/password_repeat_text"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        tools:text="@string/register" />
+
+
+</RelativeLayout>

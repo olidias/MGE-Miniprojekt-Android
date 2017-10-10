@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
         android:text="Gadgeothek"
         android:textSize="36sp" />
 
@@ -19,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_marginTop="37dp"
-        android:layout_marginStart="50dp"
-        tools:text="@string/username" />
+        android:layout_marginStart="25dp"
+        android:text="@string/username" />
 
     <EditText
         android:id="@+id/username"
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="25dp"
         android:layout_toEndOf="@+id/login_text"
         android:inputType="textPersonName" />
 
@@ -39,8 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_text"
         android:layout_marginTop="37dp"
-        android:layout_marginStart="50dp"
-        tools:text="@string/password" />
+        android:layout_marginStart="25dp"
+        android:text="@string/password" />
 
 
     <EditText
@@ -49,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_text"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="25dp"
         android:layout_toEndOf="@+id/password_text"
         android:inputType="textPassword" />
 
@@ -61,7 +60,7 @@
         android:layout_below="@+id/password_text"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        tools:text="@string/login" />
+        android:text="@string/login" />
 
     <View
         android:id="@+id/separator"
@@ -69,8 +68,8 @@
         android:layout_height="1dip"
         android:background="#AAAAAAAA"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_below="@id/login_button"/>
 
     <TextView
@@ -78,8 +77,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginStart="50dp"
-        tools:text="@string/notregistered"
+        android:layout_marginStart="25dp"
+        android:text="@string/notregistered"
         android:layout_below="@+id/separator"
         />
 
@@ -91,6 +90,6 @@
         android:layout_below="@+id/separator"
         android:layout_alignEnd="@id/separator"
         android:layout_marginTop="25dp"
-        tools:text="@string/register" />
+        android:text="@string/register" />
 
 </RelativeLayout>

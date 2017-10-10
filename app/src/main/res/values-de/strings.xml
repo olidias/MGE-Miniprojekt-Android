@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gadgeothek-Android</string>
+    <string name="overview">Übersicht</string>
+    <string name="reservations">Reservationen</string>
+    <string name="loans">Ausleihen</string>
+    <string name="settings">Einstellungen</string>
+    <string name="username">Benutzer</string>
+    <string name="password">Passwort</string>
+    <string name="passwordrepeat">Passwort wiederholen</string>
+    <string name="notregistered">Noch kein Account?</string>
+    <string name="login">Login</string>
+    <string name="register">Registrieren</string>
+</resources>

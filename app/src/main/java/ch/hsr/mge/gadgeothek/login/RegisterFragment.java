@@ -42,6 +42,5 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             // Colorize input, show notification
         }
         activity.onClick(view);
-
     }
 }

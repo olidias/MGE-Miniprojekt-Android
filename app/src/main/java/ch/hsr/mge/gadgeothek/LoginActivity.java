@@ -14,6 +14,7 @@ import ch.hsr.mge.gadgeothek.login.RegisterFragment;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main);
 
         fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction = fragmentManager.beginTransaction();
         Fragment fragment = new LoginFragment();
         fragmentTransaction.add(R.id.container, fragment);
         fragmentTransaction.commit();
@@ -34,14 +35,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 break;
             case R.id.register_button:
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction = fragmentManager.beginTransaction();
                 Fragment registerFragment = new RegisterFragment();
                 fragmentTransaction.replace(R.id.container,registerFragment);
+                fragmentTransaction.addToBackStack("register");
                 fragmentTransaction.commit();
                 break;
             default:
                 break;
         };
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        fragmentManager.popBackStack();
 
     }
 }

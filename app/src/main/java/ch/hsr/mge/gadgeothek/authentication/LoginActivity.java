@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.login;
+package ch.hsr.mge.gadgeothek.authentication;
 
 import android.app.Fragment;
 import android.app.FragmentManager;

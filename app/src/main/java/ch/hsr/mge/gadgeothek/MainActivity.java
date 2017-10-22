@@ -2,17 +2,23 @@ package ch.hsr.mge.gadgeothek;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import ch.hsr.mge.gadgeothek.authentication.LoginActivity;
+import ch.hsr.mge.gadgeothek.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.domain.SettingsFragment;
+import ch.hsr.mge.gadgeothek.service.Callback;
+import ch.hsr.mge.gadgeothek.service.LibraryService;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener, LogoutListener {
     @BindView(R.id.bottomNavigation)
     BottomNavigationView bottomNavigationView;
 
@@ -50,4 +56,26 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
 
+    @Override
+    public void OnLogoutClick() {
+        //Write changes to sharedpref?
+        LibraryService.logout(new Callback<Boolean>() {
+            @Override
+            public void onCompletion(Boolean input) {
+                if(input){
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                }
+                else{
+
+                }
+            }
+
+            @Override
+            public void onError(String message) {
+                Toast.makeText(getApplicationContext()
+                               ,R.string.logout_failure,
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 }

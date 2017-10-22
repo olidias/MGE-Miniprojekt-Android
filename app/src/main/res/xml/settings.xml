@@ -3,5 +3,5 @@
     <CheckBoxPreference
         android:key="pref_sync"
         android:defaultValue="true" />
-    <Preference android:key="logout_key" android:id="@+id/logout" android:text="@string/logout" />
+    <Preference android:key="logout_key" android:id="@+id/logout" android:title="@string/logout" />
 </PreferenceScreen>

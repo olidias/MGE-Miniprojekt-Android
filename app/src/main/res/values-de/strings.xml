@@ -7,6 +7,7 @@
     <string name="username">Benutzer</string>
     <string name="password">Passwort</string>
     <string name="passwordrepeat">Passwort wiederholen</string>
+    <string name="passwordrepeat_conflict">Passwörter stimmen nicht überein</string>
     <string name="notregistered">Noch kein Account?</string>
     <string name="login">Einloggen</string>
     <string name="logout">Ausloggen</string>

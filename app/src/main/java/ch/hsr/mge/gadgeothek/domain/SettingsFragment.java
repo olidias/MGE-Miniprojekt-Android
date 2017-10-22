@@ -12,6 +12,10 @@ public class SettingsFragment extends PreferenceFragment {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.settings);
+        handleLogoutPreference();
+    }
+
+    private void handleLogoutPreference() {
         Preference pref = findPreference("logout_key");
         pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -19,7 +23,6 @@ public class SettingsFragment extends PreferenceFragment {
                 return false;
             }
         });
-
     }
 
 }

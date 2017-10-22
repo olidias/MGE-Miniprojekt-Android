@@ -4,6 +4,8 @@ import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +33,26 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         View root = inflater.inflate(R.layout.register_fragment,container,false);
         root.findViewById(R.id.new_user_button).setOnClickListener(this);
         unbinder = ButterKnife.bind(this, root);
+        password_repeat.addTextChangedListener(new TextWatcher() {
 
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String pw = editable.toString();
+                if(!Objects.equals(pw, password.getText().toString())){
+                    password_repeat.setError(getResources().getString(R.string.passwordrepeat_conflict));
+                }
+            }
+        });
         return root;
     }
 

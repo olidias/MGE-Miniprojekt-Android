@@ -64,6 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
             public void onCompletion(Boolean input) {
                 if(input){
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
                 }
                 else{
 

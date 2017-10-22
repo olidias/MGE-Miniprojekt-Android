@@ -5,12 +5,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        />
+
+
     <android.support.design.widget.BottomNavigationView
          android:id="@+id/bottomNavigation"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:layout_gravity="bottom"
-         android:layout_alignParentBottom="true"
+         android:layout_weight="3"
          android:background="?android:attr/windowBackground"
          app:menu="@menu/navigation"/>
 </LinearLayout>

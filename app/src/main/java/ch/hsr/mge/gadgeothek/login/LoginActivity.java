@@ -17,15 +17,15 @@ import ch.hsr.mge.gadgeothek.service.LibraryService;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-    Fragment loginFragment;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
+    private Fragment loginFragment;
+    private Fragment registerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
@@ -33,21 +33,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         fragmentTransaction.add(R.id.container, loginFragment);
 
         fragmentTransaction.commit();
-
     }
 
     @Override
     public void onClick(View view) {
 
-
         switch(view.getId()){
             case R.id.login_button:
-
                 loginClick();
-
                 break;
             case R.id.register_button:
                 registerClick();
+                break;
+            case R.id.new_user_button:
+                newUserClick();
                 break;
             default:
                 break;
@@ -55,10 +54,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    private void newUserClick() {
+        EditText username = registerFragment.getView().findViewById(R.id.register_username);
+        EditText pass = registerFragment.getView().findViewById(R.id.register_password);
+        LibraryService.register(username.getText().toString(), pass.getText().toString(), username.getText().toString(),"", new Callback<Boolean>() {
+            @Override
+            public void onCompletion(Boolean input) {
+                handleLoginCompletion(input);
+            }
+
+            @Override
+            public void onError(String message) {
+                handleLoginError(message);
+            }
+        });
+    }
+
     private void registerClick() {
         fragmentTransaction = fragmentManager.beginTransaction();
-        Fragment registerFragment = new RegisterFragment();
-        fragmentTransaction.replace(R.id.container,registerFragment);
+        registerFragment = new RegisterFragment();
+        fragmentTransaction.replace(R.id.container, registerFragment);
         fragmentTransaction.addToBackStack("register");
         fragmentTransaction.commit();
     }
@@ -77,9 +92,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 handleLoginError(message);
             }
         });
-        //--Non-Productive Code--
-        //handleLoginCompletion(true);
-        // -----
     }
 
     private void handleLoginError(String message) {
@@ -89,11 +101,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void handleLoginCompletion(Boolean success) {
         if(success){
-            //Write login status to shared preferences
             startActivity(new Intent(this, MainActivity.class));
         }
         else{
-
+            //Notify user
         }
     }
 

@@ -13,10 +13,10 @@ import ch.hsr.mge.gadgeothek.domain.Loan;
 import ch.hsr.mge.gadgeothek.domain.Reservation;
 
 public class LibraryService {
-    
+    private static final String LOCALHOST_SERVER_URL = "http://mge2.dev.ifs.hsr.ch/public";
     private static final String TAG = LibraryService.class.getSimpleName();
     private static LoginToken token;
-    private static String serverUrl;
+    private static String serverUrl = LOCALHOST_SERVER_URL;
 
     public static void setServerAddress(String address) {
         Log.d(TAG, "Setting server to " + address);

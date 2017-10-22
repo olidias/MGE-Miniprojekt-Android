@@ -9,5 +9,6 @@
     <string name="passwordrepeat">Repeat Password</string>
     <string name="notregistered">No account yet?</string>
     <string name="login">Login</string>
+    <string name="logout">Logout</string>
     <string name="register">Register</string>
 </resources>

@@ -21,8 +21,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     private View.OnClickListener activity;
 
-    @BindView(R.id.password) EditText password;
-    @BindView(R.id.password_repeat) EditText password_repeat;
+    @BindView(R.id.register_password) EditText password;
+    @BindView(R.id.register_password_repeat) EditText password_repeat;
     private Unbinder unbinder;
 
 

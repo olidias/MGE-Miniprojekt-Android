@@ -10,6 +10,7 @@
     <string name="passwordrepeat_conflict">Passwords don\'t match</string>
     <string name="notregistered">No account yet?</string>
     <string name="login">Login</string>
+    <string name="login_failure">Login failed</string>
     <string name="logout">Logout</string>
     <string name="logout_failure">There was a problem with your logout</string>
     <string name="register">Register</string>

@@ -10,6 +10,7 @@
     <string name="passwordrepeat_conflict">Passwörter stimmen nicht überein</string>
     <string name="notregistered">Noch kein Account?</string>
     <string name="login">Einloggen</string>
+    <string name="login_failure">Login fehlgeschlagen</string>
     <string name="logout">Ausloggen</string>
     <string name="logout_failure">Es trat ein Problem mit dem Ausloggen auf</string>
     <string name="register">Registrieren</string>

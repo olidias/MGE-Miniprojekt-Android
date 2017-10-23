@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import ch.hsr.mge.gadgeothek.R;
 import ch.hsr.mge.gadgeothek.MainActivity;
@@ -96,6 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void handleLoginError(String message) {
         Log.e("LOGINERROR", message);
+        Toast.makeText(this, getResources().getText(R.string.login_failure)+": "+message, Toast.LENGTH_SHORT).show();
     }
 
 
@@ -104,7 +106,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(new Intent(this, MainActivity.class));
         }
         else{
-            //Notify user
+            Log.d("LOGINERROR","Login error!");
         }
     }
 
@@ -112,7 +114,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onBackPressed() {
         super.onBackPressed();
         fragmentManager.popBackStack();
-
     }
 
 }

@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.domain.gadget;
+package ch.hsr.mge.gadgeothek.domain;
 
 import java.util.UUID;
 

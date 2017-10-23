@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.authentication;
+package ch.hsr.mge.gadgeothek.presentation.authentication;
 
 import android.app.Fragment;
 import android.content.Context;

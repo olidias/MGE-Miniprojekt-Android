@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.domain.gadget;
+package ch.hsr.mge.gadgeothek.presentation.gadgetoverview;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ch.hsr.mge.gadgeothek.R;
+import ch.hsr.mge.gadgeothek.domain.Gadget;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 
@@ -23,6 +24,7 @@ public class GadgetOverviewFragment extends Fragment {
     private GadgetAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    private ArrayList<Gadget> gadgetList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -32,15 +34,19 @@ public class GadgetOverviewFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
 
-        layoutManager = new LinearLayoutManager(root.getContext());
+        layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
 
+
+        adapter = new GadgetAdapter(gadgetList);
+        recyclerView.setAdapter(adapter);
 
         LibraryService.getGadgets(new Callback<List<Gadget>>() {
             @Override
             public void onCompletion(List<Gadget> input) {
-                adapter = new GadgetAdapter(new ArrayList<>(input));
-                recyclerView.setAdapter(adapter);
+                gadgetList.clear();
+                gadgetList.addAll(input);
+                adapter.notifyDataSetChanged();
             }
 
             @Override

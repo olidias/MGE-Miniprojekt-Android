@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.domain.gadget;
+package ch.hsr.mge.gadgeothek.presentation.gadgetoverview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import ch.hsr.mge.gadgeothek.R;
+import ch.hsr.mge.gadgeothek.domain.Gadget;
 
 class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder>{
 

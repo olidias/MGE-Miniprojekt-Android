@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.authentication;
+package ch.hsr.mge.gadgeothek.presentation.authentication;
 
 public interface LogoutListener {
     void OnLogoutClick();

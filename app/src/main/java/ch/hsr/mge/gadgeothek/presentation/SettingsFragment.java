@@ -1,13 +1,12 @@
-package ch.hsr.mge.gadgeothek.domain;
+package ch.hsr.mge.gadgeothek.presentation;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.view.View;
 
 import ch.hsr.mge.gadgeothek.R;
-import ch.hsr.mge.gadgeothek.authentication.LogoutListener;
+import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
 
 public class SettingsFragment extends PreferenceFragment {
     private LogoutListener activity;

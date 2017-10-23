@@ -11,6 +11,14 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
 
+    <TextView
+        android:id="@+id/no_gadgets_message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="no items found"
+        android:textAlignment="center"
+        />
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"

@@ -2,6 +2,7 @@ package ch.hsr.mge.gadgeothek;
 
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,16 +13,19 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import ch.hsr.mge.gadgeothek.authentication.LoginActivity;
-import ch.hsr.mge.gadgeothek.authentication.LogoutListener;
-import ch.hsr.mge.gadgeothek.domain.SettingsFragment;
-import ch.hsr.mge.gadgeothek.domain.gadget.GadgetOverviewFragment;
+import ch.hsr.mge.gadgeothek.presentation.authentication.LoginActivity;
+import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
+import ch.hsr.mge.gadgeothek.presentation.SettingsFragment;
+import ch.hsr.mge.gadgeothek.presentation.gadgetoverview.GadgetOverviewFragment;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 
 public class MainActivity extends Activity implements View.OnClickListener, LogoutListener {
     @BindView(R.id.bottomNavigation)
     BottomNavigationView bottomNavigationView;
+
+    GadgetOverviewFragment gadgetOverviewFragment = new GadgetOverviewFragment();
+    SettingsFragment settingsFragment = new SettingsFragment();
 
 
     @Override
@@ -31,7 +35,13 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        ShowFragment(gadgetOverviewFragment);
+
         setNavigationListener();
+    }
+
+    private void ShowFragment(Fragment fragment) {
+        getFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
     }
 
     private void setNavigationListener() {
@@ -40,14 +50,13 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.settings:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+                        ShowFragment(settingsFragment);
                         break;
                     case R.id.overview:
-                        getFragmentManager().beginTransaction().replace(R.id.container, new GadgetOverviewFragment()).commit();
+                        ShowFragment(gadgetOverviewFragment);
                         break;
                     default:
                         break;
-
                 }
                 return true;
             }

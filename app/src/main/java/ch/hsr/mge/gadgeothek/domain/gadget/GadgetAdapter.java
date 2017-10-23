@@ -35,10 +35,10 @@ class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder>{
     public void onBindViewHolder(GadgetViewHolder holder, int position) {
         final Gadget gadget = gadgetList.get(position);
         holder.gadgetTitle.setText(gadget.getName());
-        holder.gadgetProducer.setText(gadget.getManufacturer());
+        holder.gadgetProducer.setText(" by "+gadget.getManufacturer());
         // Check for availability (is reserved? is on loan?)
         // holder.gadgetAvailability.setText(gadget.get);
-        holder.gadgetPrice.setText(Double.toString(gadget.getPrice()));
+        holder.gadgetPrice.setText(Double.toString(gadget.getPrice())+".-");
     }
 
     @Override

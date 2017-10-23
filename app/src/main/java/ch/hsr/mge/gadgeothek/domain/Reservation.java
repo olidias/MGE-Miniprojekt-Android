@@ -2,6 +2,8 @@ package ch.hsr.mge.gadgeothek.domain;
 
 import java.util.Date;
 
+import ch.hsr.mge.gadgeothek.domain.gadget.Gadget;
+
 public class Reservation {
 
     private String id;

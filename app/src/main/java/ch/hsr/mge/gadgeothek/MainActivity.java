@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import ch.hsr.mge.gadgeothek.authentication.LoginActivity;
 import ch.hsr.mge.gadgeothek.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.domain.SettingsFragment;
+import ch.hsr.mge.gadgeothek.domain.gadget.GadgetOverviewFragment;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 
@@ -40,6 +41,9 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
                 switch(item.getItemId()){
                     case R.id.settings:
                         getFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+                        break;
+                    case R.id.overview:
+                        getFragmentManager().beginTransaction().replace(R.id.container, new GadgetOverviewFragment()).commit();
                         break;
                     default:
                         break;

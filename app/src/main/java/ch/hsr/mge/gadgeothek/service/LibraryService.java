@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import ch.hsr.mge.gadgeothek.domain.Gadget;
+import ch.hsr.mge.gadgeothek.domain.gadget.Gadget;
 import ch.hsr.mge.gadgeothek.domain.Loan;
 import ch.hsr.mge.gadgeothek.domain.Reservation;
 

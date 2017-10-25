@@ -2,7 +2,9 @@
     <string name="app_name">Gadgeothek-Android</string>
     <string name="overview">Overview</string>
     <string name="reservations">Reservations</string>
+    <string name="reserve">Reserve</string>
     <string name="loans">Loans</string>
+    <string name="loan">Loan</string>
     <string name="settings">Settings</string>
     <string name="username">User</string>
     <string name="password">Password</string>
@@ -14,4 +16,14 @@
     <string name="logout">Logout</string>
     <string name="logout_failure">There was a problem with your logout</string>
     <string name="register">Register</string>
+    <string name="register_failure">Registration failed</string>
+    <string name="no_items_found">No Items Found</string>
+    <string name="description">Description</string>
+    <string name="producer">Manufacturer</string>
+    <string name="condition">Condition</string>
+    <string name="availability">Availability</string>
+    <string name="price">Price</string>
+    <string name="by">by</string>
+
+
 </resources>

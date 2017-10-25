@@ -56,17 +56,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void newUserClick() {
-        EditText username = registerFragment.getView().findViewById(R.id.register_username);
-        EditText pass = registerFragment.getView().findViewById(R.id.register_password);
+        final EditText username = registerFragment.getView().findViewById(R.id.register_username);
+        final EditText pass = registerFragment.getView().findViewById(R.id.register_password);
         LibraryService.register(username.getText().toString(), pass.getText().toString(), username.getText().toString(),"", new Callback<Boolean>() {
             @Override
             public void onCompletion(Boolean input) {
-                handleLoginCompletion(input);
+                LibraryService.login(username.getText().toString(), pass.getText().toString(), new Callback<Boolean>() {
+                    @Override
+                    public void onCompletion(Boolean input) {
+                        handleLoginCompletion(input);
+                    }
+
+                    @Override
+                    public void onError(String message) {
+                        handleError(getResources().getText(R.string.login_failure).toString(),message);
+                    }
+                });
             }
 
             @Override
             public void onError(String message) {
-                handleLoginError(message);
+                handleError(getResources().getText(R.string.register_failure).toString(), message);
             }
         });
     }
@@ -90,14 +100,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
             @Override
             public void onError(String message) {
-                handleLoginError(message);
+                handleError(getResources().getText(R.string.login_failure).toString(), message);
             }
         });
     }
 
-    private void handleLoginError(String message) {
-        Log.e("LOGINERROR", message);
-        Toast.makeText(this, getResources().getText(R.string.login_failure)+": "+message, Toast.LENGTH_SHORT).show();
+    private void handleError(String errorType, String message) {
+        Log.e(errorType, message);
+        Toast.makeText(this, errorType+": "+message, Toast.LENGTH_SHORT).show();
     }
 
 

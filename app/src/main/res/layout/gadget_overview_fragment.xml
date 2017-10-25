@@ -9,17 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="56dp"
         />
-
-    <TextView
-        android:id="@+id/no_gadgets_message"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="no items found"
-        android:textAlignment="center"
-        />
-
-
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -27,6 +18,7 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
+            app:title="@string/overview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
@@ -48,4 +40,15 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/no_gadgets_message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="128dp"
+        android:text="@string/no_items_found"
+        android:textAlignment="center"
+        />
+
+
 </android.support.design.widget.CoordinatorLayout>

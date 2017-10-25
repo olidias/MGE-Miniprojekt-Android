@@ -1,4 +1,4 @@
-package ch.hsr.mge.gadgeothek.presentation.gadgetoverview;
+package ch.hsr.mge.gadgeothek.presentation.gadget;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,25 +11,25 @@ import java.util.ArrayList;
 import ch.hsr.mge.gadgeothek.R;
 import ch.hsr.mge.gadgeothek.domain.Gadget;
 
-class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder>{
+class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder> implements View.OnClickListener{
 
+    private final GadgetCommunication communicator;
     private ArrayList<Gadget> gadgetList;
 
-    GadgetAdapter(ArrayList<Gadget> gadgetList){
+    GadgetAdapter(ArrayList<Gadget> gadgetList, GadgetCommunication communicator){
         this.gadgetList = gadgetList;
+        this.communicator = communicator;
     }
-
 
     @Override
     public GadgetViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View v = layoutInflater.inflate(R.layout.rowlayout, parent, false);
-        TextView gadgetTitle = v.findViewById(R.id.gadget_title);
-        TextView gadgetProducer = v.findViewById(R.id.gadget_producer);
-        TextView gadgetAvailability = v.findViewById(R.id.gadget_availability);
-        TextView gadgetPrice= v.findViewById(R.id.gadget_price);
 
-        return new GadgetViewHolder(v,gadgetTitle, gadgetProducer,gadgetAvailability,gadgetPrice);
+        final View v = layoutInflater.inflate(R.layout.rowlayout, parent, false);
+
+        v.setOnClickListener(this);
+
+        return new GadgetViewHolder(v);
     }
 
     @Override
@@ -40,10 +40,17 @@ class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder>{
         // Check for availability (is reserved? is on loan?)
         // holder.gadgetAvailability.setText(gadget.get);
         holder.gadgetPrice.setText(Double.toString(gadget.getPrice())+".-");
+
     }
 
     @Override
     public int getItemCount() {
         return gadgetList.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        GadgetViewHolder holder = (GadgetViewHolder) view.getTag();
+        communicator.transmit(gadgetList.get(holder.getAdapterPosition()));
     }
 }

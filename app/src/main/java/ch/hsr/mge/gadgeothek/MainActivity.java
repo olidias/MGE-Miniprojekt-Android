@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LoginActivity;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.presentation.SettingsFragment;
-import ch.hsr.mge.gadgeothek.presentation.gadgetoverview.GadgetOverviewFragment;
+import ch.hsr.mge.gadgeothek.presentation.gadget.GadgetOverviewFragment;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 

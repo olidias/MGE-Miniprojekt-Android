@@ -3,8 +3,12 @@
     <string name="overview">Übersicht</string>
     <string name="reservations">Reservationen</string>
     <string name="reserve">Reservieren</string>
+    <string name="reserve_success">Deine Reservation war erfolgreich!</string>
+    <string name="reserve_failure">Deine Reservierung schlug fehl: </string>
     <string name="loans">Ausleihen</string>
     <string name="loan">Ausleihen</string>
+    <string name="loan_success">Deine Ausleihe war erfolgreich!</string>
+    <string name="loan_failure">Deine Ausleihe schlug fehl: </string>
     <string name="settings">Einstellungen</string>
     <string name="username">Benutzer</string>
     <string name="password">Passwort</string>

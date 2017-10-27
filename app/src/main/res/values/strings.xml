@@ -3,8 +3,12 @@
     <string name="overview">Overview</string>
     <string name="reservations">Reservations</string>
     <string name="reserve">Reserve</string>
+    <string name="reserve_success">Your reservation was successful!</string>
+    <string name="reserve_failure">Your reservation failed</string>
     <string name="loans">Loans</string>
     <string name="loan">Loan</string>
+    <string name="loan_success">Your loan was successful!</string>
+    <string name="loan_failure">Your loan failed:</string>
     <string name="settings">Settings</string>
     <string name="username">User</string>
     <string name="password">Password</string>

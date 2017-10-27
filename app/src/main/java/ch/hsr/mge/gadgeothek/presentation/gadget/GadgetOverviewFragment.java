@@ -28,7 +28,7 @@ public class GadgetOverviewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View root = inflater.inflate(R.layout.gadget_overview_fragment,container,false);
+        View root = inflater.inflate(R.layout.overview_fragment,container,false);
 
         recyclerView = root.findViewById(R.id.recyclerView);
 
@@ -63,14 +63,16 @@ public class GadgetOverviewFragment extends Fragment {
         return root;
     }
 
-    private GadgetCommunication gadgetCommunicator = new GadgetCommunication() {
+    private Communicator<Gadget> gadgetCommunicator = new Communicator<Gadget>() {
         @Override
         public void transmit(Gadget selectedGadget) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("GADGET", selectedGadget);
             DetailGadgetFragment frag = new DetailGadgetFragment();
             frag.setArguments(bundle);
-            getFragmentManager().beginTransaction().replace(R.id.container,frag).commit();
+            getFragmentManager().beginTransaction().replace(R.id.container,frag).addToBackStack("").commit();
         }
     };
+
+
 }

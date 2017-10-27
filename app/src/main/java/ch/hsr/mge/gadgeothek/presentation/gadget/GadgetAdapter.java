@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -13,10 +12,10 @@ import ch.hsr.mge.gadgeothek.domain.Gadget;
 
 class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder> implements View.OnClickListener{
 
-    private final GadgetCommunication communicator;
+    private final Communicator communicator;
     private ArrayList<Gadget> gadgetList;
 
-    GadgetAdapter(ArrayList<Gadget> gadgetList, GadgetCommunication communicator){
+    GadgetAdapter(ArrayList<Gadget> gadgetList, Communicator communicator){
         this.gadgetList = gadgetList;
         this.communicator = communicator;
     }
@@ -25,7 +24,7 @@ class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder> implements Vi
     public GadgetViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
 
-        final View v = layoutInflater.inflate(R.layout.rowlayout, parent, false);
+        final View v = layoutInflater.inflate(R.layout.gadget_rowlayout, parent, false);
 
         v.setOnClickListener(this);
 

@@ -13,10 +13,12 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import ch.hsr.mge.gadgeothek.domain.Reservation;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LoginActivity;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.presentation.SettingsFragment;
 import ch.hsr.mge.gadgeothek.presentation.gadget.GadgetOverviewFragment;
+import ch.hsr.mge.gadgeothek.presentation.reservations.ReservationsOverviewFragment;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 
@@ -26,6 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
 
     GadgetOverviewFragment gadgetOverviewFragment = new GadgetOverviewFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
+    ReservationsOverviewFragment reservationsFragment = new ReservationsOverviewFragment();
 
 
     @Override

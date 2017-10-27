@@ -110,6 +110,31 @@ public class LibraryService {
         request.execute();
     }
 
+
+    public static void loanGadget(Loan toLoan, final Callback<Boolean> callback) {
+        if (token == null) {
+            throw new IllegalStateException("Not logged in");
+        }
+        HashMap<String, String> headers = getAuthHeaders();
+
+        HashMap<String, String> parameter = new HashMap<>();
+        parameter.put("loanId", toLoan.getLoanId());
+
+        Request<Boolean> request = new Request<>(HttpVerb.POST, serverUrl + "/loans", new TypeToken<Boolean>() {
+        }.getType(), headers, parameter, new Callback<Boolean>() {
+            @Override
+            public void onCompletion(Boolean success) {
+                callback.onCompletion(success);
+            }
+
+            @Override
+            public void onError(String message) {
+                callback.onError(message);
+            }
+        });
+        request.execute();
+    }
+
     public static void getReservationsForCustomer(final Callback<List<Reservation>> callback) {
         if (token == null) {
             throw new IllegalStateException("Not logged in");

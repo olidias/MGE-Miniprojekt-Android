@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import ch.hsr.mge.gadgeothek.domain.Reservation;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LoginActivity;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.presentation.SettingsFragment;
@@ -52,11 +51,14 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
-                    case R.id.settings:
-                        ShowFragment(settingsFragment);
-                        break;
                     case R.id.overview:
                         ShowFragment(gadgetOverviewFragment);
+                        break;
+                    case R.id.reservations:
+                        ShowFragment(reservationsFragment);
+                        break;
+                    case R.id.settings:
+                        ShowFragment(settingsFragment);
                         break;
                     default:
                         break;

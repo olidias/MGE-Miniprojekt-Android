@@ -28,6 +28,7 @@
     <string name="availability">Availability</string>
     <string name="price">Price</string>
     <string name="by">by</string>
+    <string name="reservation_ready">Ready to loan</string>
 
 
 </resources>

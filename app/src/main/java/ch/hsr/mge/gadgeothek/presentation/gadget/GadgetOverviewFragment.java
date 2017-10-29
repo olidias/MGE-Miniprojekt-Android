@@ -14,6 +14,7 @@ import java.util.List;
 
 import ch.hsr.mge.gadgeothek.R;
 import ch.hsr.mge.gadgeothek.domain.Gadget;
+import ch.hsr.mge.gadgeothek.presentation.Communicator;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
 

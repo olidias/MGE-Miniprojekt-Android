@@ -5,6 +5,10 @@
     <string name="reserve">Reservieren</string>
     <string name="reserve_success">Deine Reservation war erfolgreich!</string>
     <string name="reserve_failure">Deine Reservierung schlug fehl: </string>
+    <string name="reservation_ready">Bereit zur Ausleihe</string>
+    <string name="reservation_date">Reserviert am: </string>
+    <string name="reservation_waiting_position">Warteposition: </string>
+    <string name="delete_reservation">Reservation Löschen</string>
     <string name="loans">Ausleihen</string>
     <string name="loan">Ausleihen</string>
     <string name="loan_success">Deine Ausleihe war erfolgreich!</string>

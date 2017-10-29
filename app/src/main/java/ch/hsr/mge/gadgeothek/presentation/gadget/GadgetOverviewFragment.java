@@ -2,6 +2,7 @@ package ch.hsr.mge.gadgeothek.presentation.gadget;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -30,6 +31,9 @@ public class GadgetOverviewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View root = inflater.inflate(R.layout.overview_fragment,container,false);
+
+        CollapsingToolbarLayout toolbar = root.findViewById(R.id.collapsing_toolbar);
+        toolbar.setTitle(getResources().getString(R.string.overview));
 
         recyclerView = root.findViewById(R.id.recyclerView);
 

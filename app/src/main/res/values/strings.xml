@@ -5,6 +5,10 @@
     <string name="reserve">Reserve</string>
     <string name="reserve_success">Your reservation was successful!</string>
     <string name="reserve_failure">Your reservation failed</string>
+    <string name="reservation_ready">Ready to loan</string>
+    <string name="reservation_date">Reserved on: </string>
+    <string name="reservation_waiting_position">Waiting Position: </string>
+    <string name="delete_reservation">Delete reservation</string>
     <string name="loans">Loans</string>
     <string name="loan">Loan</string>
     <string name="loan_success">Your loan was successful!</string>
@@ -28,7 +32,7 @@
     <string name="availability">Availability</string>
     <string name="price">Price</string>
     <string name="by">by</string>
-    <string name="reservation_ready">Ready to loan</string>
+    <string name="reservation_deletion_success">Successfully deleted reservation</string>
 
 
 </resources>

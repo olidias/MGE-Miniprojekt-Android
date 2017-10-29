@@ -11,7 +11,7 @@ import ch.hsr.mge.gadgeothek.R;
 import ch.hsr.mge.gadgeothek.domain.Reservation;
 import ch.hsr.mge.gadgeothek.presentation.Communicator;
 
-class ReservationsAdapter extends RecyclerView.Adapter<ReservationsViewHolder> {
+class ReservationsAdapter extends RecyclerView.Adapter<ReservationsViewHolder> implements View.OnClickListener{
 
     private final Communicator<Reservation> reservationCommunicator;
     private final ArrayList<Reservation> reservationList;
@@ -27,6 +27,8 @@ class ReservationsAdapter extends RecyclerView.Adapter<ReservationsViewHolder> {
 
         final View v = layoutInflater.inflate(R.layout.reservation_rowlayout, parent, false);
 
+        v.setOnClickListener(this);
+
         return new ReservationsViewHolder(v);
     }
 
@@ -37,11 +39,17 @@ class ReservationsAdapter extends RecyclerView.Adapter<ReservationsViewHolder> {
         holder.gadgetProducer.setText(res.getGadget().getManufacturer());
         holder.reservationDate.setText(res.getReservationDate().toString());
         holder.isReady.setText(res.isReady()?"Ready to pick up":  "Not Ready yet");
-        holder.waitingPosition.setText(Integer.toString(res.getWatingPosition()));
+        holder.waitingPosition.setText(Integer.toString(res.getWaitingPosition()));
     }
 
     @Override
     public int getItemCount() {
         return reservationList.size();
+    }
+
+    @Override
+    public void onClick(View view) {
+        ReservationsViewHolder holder = (ReservationsViewHolder) view.getTag();
+        reservationCommunicator.transmit(reservationList.get(holder.getAdapterPosition()));
     }
 }

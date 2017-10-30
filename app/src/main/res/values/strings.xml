@@ -38,4 +38,6 @@
     <string name="no_return_date">No return date defined</string>
     <string name="gadget_title">Gadget Name: </string>
     <string name="server_change">Change server</string>
+    <string name="studentnumber">Student Number: </string>
+    <string name="email">E-Mail</string>
 </resources>

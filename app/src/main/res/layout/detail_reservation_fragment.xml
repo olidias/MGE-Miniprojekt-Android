@@ -109,6 +109,8 @@
         />
 
     <Button
+        style="@style/Widget.AppCompat.Button"
+        android:theme="@style/AppTheme"
         android:id="@+id/loan_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,6 +118,7 @@
         android:layout_row="7"
         android:text="@string/loan" />
     <Button
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/delete_reservation_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

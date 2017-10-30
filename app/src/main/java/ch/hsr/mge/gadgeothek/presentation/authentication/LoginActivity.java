@@ -58,7 +58,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void newUserClick() {
         final EditText username = registerFragment.getView().findViewById(R.id.register_username);
         final EditText pass = registerFragment.getView().findViewById(R.id.register_password);
-        LibraryService.register(username.getText().toString(), pass.getText().toString(), username.getText().toString(),"", new Callback<Boolean>() {
+        final EditText studNum = registerFragment.getView().findViewById(R.id.student_number);
+        final EditText mail = registerFragment.getView().findViewById(R.id.email);
+
+        LibraryService.register(mail.getText().toString(), pass.getText().toString(), username.getText().toString(),studNum.getText().toString(), new Callback<Boolean>() {
             @Override
             public void onCompletion(Boolean input) {
                 LibraryService.login(username.getText().toString(), pass.getText().toString(), new Callback<Boolean>() {

@@ -93,9 +93,7 @@ public class LibraryService {
 
 
     public static void getLoansForCustomer(final Callback<List<Loan>> callback) {
-        if (token == null) {
-            throw new IllegalStateException("Not logged in");
-        }
+
         HashMap<String, String> headers = getAuthHeaders();
 
         Request<List<Loan>> request = new Request<>(HttpVerb.GET, serverUrl + "/loans", new TypeToken<List<Loan>>() {

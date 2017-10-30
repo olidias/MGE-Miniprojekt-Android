@@ -32,10 +32,49 @@
 
 
     <TextView
-        android:id="@+id/password_text"
+        android:id="@+id/student_number_text"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_text"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/studentnumber" />
+
+
+    <EditText
+        android:id="@+id/student_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_username"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/student_number_text"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/email_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_number_text"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/student_number"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@+id/email_text"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
         android:layout_marginTop="37dp"
         android:layout_marginStart="25dp"
         android:text="@string/password" />
@@ -45,7 +84,7 @@
         android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_text"
+        android:layout_below="@+id/email"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:layout_toEndOf="@+id/password_text"
@@ -71,11 +110,12 @@
         android:layout_toEndOf="@+id/password_text"
         android:inputType="textPassword" />
 
+
     <Button
         android:id="@+id/new_user_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/password_repeat"
+        android:layout_alignEnd="@+id/register_password_repeat"
         android:layout_below="@+id/password_repeat_text"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"

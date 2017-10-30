@@ -35,4 +35,7 @@
     <string name="select_pickup_date">Abholdatum wählen</string>
     <string name="no_return_date">Kein Rückgabedatum bestimmt</string>
     <string name="gadget_title">Gadget Name: </string>
+    <string name="server_change">Server wechseln</string>
+    <string name="studentnumber">Matrikelnummer: </string>
+    <string name="email">E-Mail</string>
 </resources>

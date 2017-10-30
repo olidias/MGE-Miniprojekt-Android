@@ -31,4 +31,6 @@
     <string name="condition">Zustand</string>
     <string name="availability">Verfügbarkeit</string>
     <string name="price">Preis</string>
+    <string name="select_pickup_date">Abholdatum wählen</string>
+
 </resources>

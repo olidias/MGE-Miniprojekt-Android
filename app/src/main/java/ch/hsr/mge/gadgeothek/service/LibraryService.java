@@ -13,7 +13,7 @@ import ch.hsr.mge.gadgeothek.domain.Loan;
 import ch.hsr.mge.gadgeothek.domain.Reservation;
 
 public class LibraryService {
-    private static final String LOCALHOST_SERVER_URL = "http://10.0.2.2:8080/public";
+    private static final String LOCALHOST_SERVER_URL = "http://mge7.dev.ifs.hsr.ch/public";
     private static final String TAG = LibraryService.class.getSimpleName();
     private static LoginToken token;
     private static String serverUrl = LOCALHOST_SERVER_URL;

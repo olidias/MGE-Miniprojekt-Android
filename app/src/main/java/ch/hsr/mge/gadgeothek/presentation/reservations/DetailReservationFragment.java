@@ -1,7 +1,6 @@
 package ch.hsr.mge.gadgeothek.presentation.reservations;
 
 import android.app.Fragment;
-import android.net.sip.SipAudioCall;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;

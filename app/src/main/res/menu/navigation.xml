@@ -16,7 +16,7 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/rental"
+        android:id="@+id/loans"
         android:enabled="true"
         android:title="@string/loans"
         android:icon="@drawable/borrow"

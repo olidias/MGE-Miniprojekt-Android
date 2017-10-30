@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <Preference android:key="logout_key" android:id="@+id/logout" android:title="@string/logout" />
+    <Preference android:key="server_change_key" android:id="@+id/set_server" android:title="@string/server_change" />
 </PreferenceScreen>

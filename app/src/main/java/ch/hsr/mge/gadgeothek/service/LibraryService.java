@@ -22,6 +22,9 @@ public class LibraryService {
         Log.d(TAG, "Setting server to " + address);
         serverUrl = address;
     }
+    public static String getServerAddress(){
+        return serverUrl;
+    }
 
     public static boolean isLoggedIn() {
         return token != null;

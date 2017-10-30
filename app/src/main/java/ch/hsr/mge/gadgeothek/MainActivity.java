@@ -17,6 +17,7 @@ import ch.hsr.mge.gadgeothek.presentation.authentication.LoginActivity;
 import ch.hsr.mge.gadgeothek.presentation.authentication.LogoutListener;
 import ch.hsr.mge.gadgeothek.presentation.SettingsFragment;
 import ch.hsr.mge.gadgeothek.presentation.gadget.GadgetOverviewFragment;
+import ch.hsr.mge.gadgeothek.presentation.loans.LoanOverviewFragment;
 import ch.hsr.mge.gadgeothek.presentation.reservations.ReservationsOverviewFragment;
 import ch.hsr.mge.gadgeothek.service.Callback;
 import ch.hsr.mge.gadgeothek.service.LibraryService;
@@ -28,6 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
     GadgetOverviewFragment gadgetOverviewFragment = new GadgetOverviewFragment();
     SettingsFragment settingsFragment = new SettingsFragment();
     ReservationsOverviewFragment reservationsFragment = new ReservationsOverviewFragment();
+    LoanOverviewFragment loansFragment = new LoanOverviewFragment();
 
 
     @Override
@@ -56,6 +58,9 @@ public class MainActivity extends Activity implements View.OnClickListener, Logo
                         break;
                     case R.id.reservations:
                         ShowFragment(reservationsFragment);
+                        break;
+                    case R.id.loans:
+                        ShowFragment(loansFragment);
                         break;
                     case R.id.settings:
                         ShowFragment(settingsFragment);

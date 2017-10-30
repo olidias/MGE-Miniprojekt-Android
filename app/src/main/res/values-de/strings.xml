@@ -7,6 +7,7 @@
     <string name="reserve_failure">Deine Reservierung schlug fehl: </string>
     <string name="reservation_ready">Bereit zur Ausleihe</string>
     <string name="reservation_date">Reserviert am: </string>
+    <string name="bring_back_date_text">Rückgabe am: </string>
     <string name="reservation_waiting_position">Warteposition: </string>
     <string name="delete_reservation">Reservation Löschen</string>
     <string name="loans">Ausleihen</string>
@@ -32,5 +33,6 @@
     <string name="availability">Verfügbarkeit</string>
     <string name="price">Preis</string>
     <string name="select_pickup_date">Abholdatum wählen</string>
-
+    <string name="no_return_date">Kein Rückgabedatum bestimmt</string>
+    <string name="gadget_title">Gadget Name: </string>
 </resources>

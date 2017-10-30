@@ -26,7 +26,8 @@
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:expandedTitleTextAppearance="@color/white"
+            app:collapsedTitleTextAppearance="@color/white"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -34,7 +35,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:subtitleTextColor="@color/white"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin" />
 
@@ -44,9 +45,10 @@
 
     <TextView
         android:id="@+id/no_gadgets_message"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="150dp"
         android:text="@string/no_items_found"
         android:textAlignment="center"
         />

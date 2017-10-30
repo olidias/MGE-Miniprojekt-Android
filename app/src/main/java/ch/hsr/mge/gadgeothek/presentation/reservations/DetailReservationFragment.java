@@ -1,6 +1,7 @@
 package ch.hsr.mge.gadgeothek.presentation.reservations;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -21,14 +22,11 @@ public class DetailReservationFragment extends Fragment{
         Toolbar toolbar = root.findViewById(R.id.toolbar);
         toolbar.setTitle("Reservation: "+ reservation.getGadget().getName());
 
-
         TextView producer = root.findViewById(R.id.producer);
         producer.setText(reservation.getGadget().getManufacturer());
 
         TextView condition = root.findViewById(R.id.condition);
         condition.setText(reservation.getGadget().getCondition().name());
-
-        //TODO Availability
 
         TextView price = root.findViewById(R.id.price);
         price.setText(Double.toString(reservation.getGadget().getPrice())+".-");

@@ -45,9 +45,6 @@ public class DetailGadgetFragment extends Fragment implements View.OnClickListen
         TextView producer = root.findViewById(R.id.producer);
         producer.setText(gadget.getManufacturer());
 
-        TextView availability = root.findViewById(R.id.availability);
-        // TODO Check availability
-
         TextView price = root.findViewById(R.id.price);
         price.setText(Double.toString(gadget.getPrice())+".-");
 

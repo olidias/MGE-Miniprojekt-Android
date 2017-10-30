@@ -1,6 +1,7 @@
 package ch.hsr.mge.gadgeothek.presentation.loans;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -34,6 +35,8 @@ public class LoanOverviewFragment extends Fragment {
 
         CollapsingToolbarLayout toolbar = root.findViewById(R.id.collapsing_toolbar);
         toolbar.setTitle(getResources().getString(R.string.loans));
+        toolbar.setCollapsedTitleTextColor(Color.WHITE);
+        toolbar.setExpandedTitleColor(Color.WHITE);
 
         recyclerView = root.findViewById(R.id.recyclerView);
 

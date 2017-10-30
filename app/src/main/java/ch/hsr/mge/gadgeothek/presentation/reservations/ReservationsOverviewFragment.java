@@ -1,6 +1,7 @@
 package ch.hsr.mge.gadgeothek.presentation.reservations;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,6 +36,8 @@ public class ReservationsOverviewFragment extends Fragment implements Serializab
 
         CollapsingToolbarLayout toolbar = root.findViewById(R.id.collapsing_toolbar);
         toolbar.setTitle(getResources().getString(R.string.reservations));
+        toolbar.setCollapsedTitleTextColor(Color.WHITE);
+        toolbar.setExpandedTitleColor(Color.WHITE);
 
         recyclerView = root.findViewById(R.id.recyclerView);
 

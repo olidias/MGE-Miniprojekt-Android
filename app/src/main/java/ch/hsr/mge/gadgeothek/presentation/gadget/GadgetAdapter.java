@@ -37,8 +37,6 @@ class GadgetAdapter extends RecyclerView.Adapter<GadgetViewHolder> implements Vi
         final Gadget gadget = gadgetList.get(position);
         holder.gadgetTitle.setText(gadget.getName());
         holder.gadgetProducer.setText(" by "+gadget.getManufacturer());
-        // Check for availability (is reserved? is on loan?)
-        // holder.gadgetAvailability.setText(gadget.get);
         holder.gadgetPrice.setText(Double.toString(gadget.getPrice())+".-");
 
     }
